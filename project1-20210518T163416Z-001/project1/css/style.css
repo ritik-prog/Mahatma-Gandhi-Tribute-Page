@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   margin: 0;
@@ -8,6 +9,11 @@
 
 html {
   font-size: 10px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
@@ -63,6 +69,58 @@ header {
   text-align: justify;
 }
 
+.books {
+  padding: 20px 20px 20px 20px;
+  background: #c8d6e5;
+}
+
+.books .row {
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+.books .title {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.books .title .titleText {
+  font-size: 2em;
+  font-weight: 300;
+  color: #718093;
+}
+
+.books .title .titleText span {
+  color: #57606f;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.books img {
+  width: 50%;
+}
+
+.thumbnail {
+  box-shadow: 5px 10px #2d3436;
+}
+
+.thumbnail:hover {
+  padding: 10px;
+  box-shadow: 10px 15px #2d3436;
+}
+
+.thumbnail .caption {
+  color: #6d214f !important;
+}
+
+.books .caption {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 800 !important;
+  text-align: center;
+}
+
 .copyrightText {
   /* Change border color */
   padding: 8px 40px;
@@ -80,41 +138,15 @@ header {
 }
 
 .copyrightText a {
-  color: #70a1ff;
+  color: #fd9644;
   font-weight: 150;
   text-decoration: none;
   transition: 0.5s;
 }
 
 .copyrightText a:hover {
-  color: #fad390;
+  color: #009432;
   font-weight: 500;
   text-decoration: none;
   letter-spacing: 1px;
-}
-
-.books .content {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.title {
-  width: 100%;
-  margin-top: 5rem;
-}
-
-.titleText {
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.titleText::after {
-  margin-top: 1rem;
-  width: 10rem;
-  height: 1rem;
-  background-color: black;
 }
