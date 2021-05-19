@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 html {
@@ -69,14 +70,13 @@ header {
   text-align: justify;
 }
 
-.books {
+
+.books{
+  width:100%;
+  height: 100%;
   padding: 20px 20px 20px 20px;
   background: #c8d6e5;
-}
-
-.books .row {
-  padding-top: 15px;
-  margin-top: 20px;
+  margin-top: 5rem;
 }
 
 .books .title {
@@ -97,29 +97,177 @@ header {
   font-size: 1.5em;
 }
 
-.books img {
-  width: 50%;
+.cardcont div img{
+  width: 70%;
+  height: 100%;
 }
 
-.thumbnail {
-  box-shadow: 5px 10px #2d3436;
+.row{
+  padding: 5rem;
 }
 
-.thumbnail:hover {
-  padding: 10px;
-  box-shadow: 10px 15px #2d3436;
+.cardbody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 3rem;
+  position: relative;
 }
 
-.thumbnail .caption {
-  color: #6d214f !important;
-}
-
-.books .caption {
+.cardtext {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 800 !important;
   text-align: center;
+  color:black;
+  width: 60%;
 }
+
+.cardtext:hover{
+  animation: cardanmiate 3s ease-in-out
+}
+
+.cardcont:hover .cardtext{
+  animation: cardanmiate 3s ease-in-out;
+}
+
+@keyframes cardanmiate {
+  0%{
+    opacity: 0;
+    position: absolute;
+    bottom: 50%;
+  }
+  50%{
+    opacity: 0.5;
+    position: absolute;
+
+  }
+  100%{
+    opacity: 1;
+    position: absolute;
+    bottom: 0%;
+
+  }
+}
+
+
+
+
+
+
+
+
+.section-2{
+  width:100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.heading{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+}
+
+.heading::after{
+  content:'';
+  width: 40rem;
+  height:1rem;
+  background-color: rgba(226, 207, 36, 0.801);
+  position: absolute;
+  bottom: 0;
+  right: 29.6%;
+}
+
+.content{
+  width:100%;
+  height:100%;
+}
+
+.contentwrap{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: center;
+  padding: 5rem;
+}
+
+.contentwrap .contentimg{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.contentwrap .contentimg img{
+  width: 40rem;
+  height: 40rem;
+}
+
+
+.contentwrap .contenttext{
+  width:80%;
+}
+
+/*text edit*/
+.contentwrap .contenttext h1{
+  
+}
+
+.contentwrap .contenttext p{
+  
+}
+
+
+.moreabout{
+  width: 100%;
+  height: 100%;
+
+}
+
+.moreaboutwrap{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+}
+
+.moreabouttext{
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.moreabouttext{
+  margin-bottom: 1rem;
+}
+
+.inform{
+  width:100%;
+  height:100%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.inform p{
+  font-weight: 700;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+/*copyright*/
 
 .copyrightText {
   /* Change border color */
@@ -150,3 +298,6 @@ header {
   text-decoration: none;
   letter-spacing: 1px;
 }
+
+
+
